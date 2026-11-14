@@ -1,0 +1,460 @@
+
+/* ======================================
+   GENERAL STYLES
+====================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263449;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ======================================
+   HEADER AND NAVIGATION
+====================================== */
+
+header {
+    background: #173b67;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0 0 12px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ======================================
+   MAIN CONTENT
+====================================== */
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hero,
+.section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px #0000000d;
+}
+
+.hero h2 {
+    color: #173b67;
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.section h2 {
+    color: #173b67;
+    margin-top: 0;
+}
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #104e83;
+}
+
+.btn.secondary {
+    background: #e5edf7;
+    color: #173b67;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ======================================
+   FORMS
+====================================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #1769aa;
+    outline-offset: 1px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form .btn {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.auth-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.auth-box {
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.auth-box h3 {
+    color: #173b67;
+}
+
+/* ======================================
+   SEARCH
+====================================== */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box .btn {
+    white-space: nowrap;
+}
+
+/* ======================================
+   ITEM CARDS
+====================================== */
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.item-card {
+    border: 1px solid #dbe3ee;
+    border-radius: 8px;
+    padding: 18px;
+    overflow-wrap: anywhere;
+    background: #ffffff;
+}
+
+.item-card h3,
+.item-card h4 {
+    color: #173b67;
+    margin-top: 0;
+}
+
+.item-card p {
+    margin: 8px 0;
+}
+
+/* ======================================
+   STUDENT DASHBOARD
+====================================== */
+
+.dashboard-section {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.dashboard-section h3 {
+    color: #173b67;
+}
+
+/* ======================================
+   ADMIN DASHBOARD
+====================================== */
+
+#adminDashboard {
+    border-top: 5px solid #1769aa;
+}
+
+#adminDashboard h2 {
+    margin-bottom: 8px;
+}
+
+#adminMessage {
+    margin: 15px 0;
+    font-weight: bold;
+    color: #17633a;
+}
+
+/* Statistics cards */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background: #edf4fc;
+    border: 1px solid #d4e2f2;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #405a78;
+    font-size: 15px;
+    margin: 0 0 10px;
+}
+
+.stat-card p {
+    color: #1769aa;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Admin item cards */
+
+.admin-user-card,
+.admin-item-card,
+.admin-claim-card {
+    background: #ffffff;
+    border-left: 4px solid #1769aa;
+}
+
+.admin-claim-card {
+    border-left-color: #d69b24;
+}
+
+.admin-claim-card h3 {
+    margin-bottom: 12px;
+}
+
+/* ======================================
+   CLAIM REVIEW
+====================================== */
+
+.claim-review {
+    margin-top: 18px;
+    padding: 15px;
+    background: #f0f5fb;
+    border-radius: 8px;
+}
+
+.claim-review h4 {
+    margin-bottom: 10px;
+}
+
+.approve-button,
+.reject-button,
+.claim-button,
+.recovered-button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    margin: 5px 5px 5px 0;
+    font-size: 14px;
+}
+
+.approve-button {
+    background: #21834b;
+}
+
+.approve-button:hover {
+    background: #176638;
+}
+
+.reject-button {
+    background: #c0392b;
+}
+
+.reject-button:hover {
+    background: #962d22;
+}
+
+.claim-button {
+    background: #1769aa;
+}
+
+.recovered-button {
+    background: #21834b;
+}
+
+.review-message,
+.recovery-message {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ======================================
+   CLAIM FORM
+====================================== */
+
+.claim-form {
+    grid-column: 1 / -1;
+    background: #edf4fc;
+    border: 1px solid #cbdcf0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.claim-form h3 {
+    color: #173b67;
+}
+
+.claim-form button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+    background: #1769aa;
+    color: white;
+}
+
+.claim-form button:last-of-type {
+    background: #64748b;
+}
+
+/* ======================================
+   STATUS MESSAGES
+====================================== */
+
+#status {
+    color: #17633a;
+    font-weight: bold;
+}
+
+#formMessage {
+    font-weight: bold;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ======================================
+   FOOTER
+====================================== */
+
+footer {
+    background: #173b67;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ======================================
+   TABLET RESPONSIVE DESIGN
+====================================== */
+
+@media (max-width: 800px) {
+    .items-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ======================================
+   MOBILE RESPONSIVE DESIGN
+====================================== */
+
+@media (max-width: 700px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .hero,
+    .section {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .items-grid,
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
