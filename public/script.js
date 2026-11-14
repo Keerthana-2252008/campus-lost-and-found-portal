@@ -3,7 +3,7 @@
 // API CONFIGURATION
 // ======================================
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://campus-lost-and-found-portal-0gr2.onrender.com";
 
 // ======================================
 // GET HTML ELEMENTS
